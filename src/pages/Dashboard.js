@@ -46,8 +46,12 @@ const Dashboard = ({ user, onAuthClick, onLogout }) => {
      
       
       <main className="dashboard-main">
+        
         {/* Welcome Header */}
         <div className="dashboard-header animate-fadeInUp">
+           <div className="header-decoration">
+            <div className="floating-icon animate-float" style={{marginTop:"1.5rem"}}>🕉️</div>
+          </div>
           <div className="welcome-section">
             <h1 className="playfair">
               {getGreeting()}, {user?.name}! 🙏
@@ -56,9 +60,9 @@ const Dashboard = ({ user, onAuthClick, onLogout }) => {
               Welcome to your Ayurvedic healing dashboard. Track your progress and manage your wellness journey.
             </p>
           </div>
-          <div className="header-decoration">
+          {/* <div className="header-decoration">
             <div className="floating-icon animate-float">🕉️</div>
-          </div>
+          </div> */}
         </div>
 
         {/* Dashboard Stats */}

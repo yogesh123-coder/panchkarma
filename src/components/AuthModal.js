@@ -55,14 +55,14 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
 
         <div className="auth-tabs">
           <button
-          style={{ padding: 13 }}
+            style={{ padding: 13 }}
             className={`auth-tab ${activeTab === 'login' ? 'active' : ''}`}
             onClick={() => setActiveTab('login')}
           >
             Login
           </button>
           <button
-          style={{ padding: 13 }}
+            style={{ padding: 13 }}
             className={`auth-tab ${activeTab === 'signup' ? 'active' : ''}`}
             onClick={() => setActiveTab('signup')}
           >
@@ -73,20 +73,21 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="role-selector">
             <button
+
               type="button"
               style={{ padding: 13 }}
               className={`role-option ${selectedRole === 'patient' ? 'selected' : ''}`}
               onClick={() => setSelectedRole('patient')}
             >
-              🧘‍♀️ Patient
+              🧘‍♀️Patient
             </button>
             <button
-            style={{ padding: 13 }}
+              style={{ padding: 13 }}
               type="button"
               className={`role-option ${selectedRole === 'therapist' ? 'selected' : ''}`}
               onClick={() => setSelectedRole('therapist')}
             >
-              👨‍⚕️ Therapist
+              👨‍⚕️Therapist
             </button>
           </div>
 
@@ -94,7 +95,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group">
               <label>Full Name</label>
               <input
-              style={{ padding: 10 }}
+                style={{ padding: 10 }}
                 type="text"
                 name="name"
                 value={formData.name}
@@ -122,7 +123,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group">
               <label>Phone Number</label>
               <input
-              style={{ padding: 10 }}
+                style={{ padding: 10 }}
                 type="tel"
                 name="phone"
                 value={formData.phone}
@@ -136,7 +137,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           <div className="form-group password-field">
             <label>Password</label>
             <input
-            style={{ padding: 10 }}
+              style={{ padding: 10 }}
               type={showPassword ? 'text' : 'password'}
               name="password"
               value={formData.password}
@@ -145,7 +146,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
               required
             />
             <button
-            style={{ padding: 10 }}
+              style={{ padding: 10 }}
               type="button"
               className="password-toggle"
               onClick={() => setShowPassword(!showPassword)}
@@ -158,7 +159,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group password-field">
               <label>Confirm Password</label>
               <input
-              style={{ padding: 10 }}
+                style={{ padding: 10 }}
                 type={showPassword ? 'text' : 'password'}
                 name="confirmPassword"
                 value={formData.confirmPassword}
@@ -172,8 +173,10 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           <button type="submit" className="btn" disabled={loading}>
             {loading ? (
               <>
+              <span style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"0.5rem"}}>
                 <span className="loading-spinner"></span>
                 {activeTab === 'login' ? 'Signing In...' : 'Creating Account...'}
+                </span>
               </>
             ) : (
               activeTab === 'login' ? '🚀 Sign In' : '✨ Create Account'

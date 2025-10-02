@@ -917,7 +917,8 @@ body {
 }
 
 .dashboard-header {
-  display: flex;
+  display: grid;
+  justify-items: center;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
@@ -1004,6 +1005,10 @@ body {
 }
 
 .dashboard-grid {
+
+ 
+
+
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
@@ -1795,7 +1800,7 @@ body {
 }
 
 .welcome-section {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   display: flex;
   align-items: center;
   gap: 2rem;
