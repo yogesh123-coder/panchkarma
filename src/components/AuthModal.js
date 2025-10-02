@@ -27,7 +27,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
         role: selectedRole,
         avatar: formData.name ? formData.name.charAt(0).toUpperCase() : 'U'
       };
-      
+
       onLogin(userData);
       setLoading(false);
       onClose();
@@ -45,7 +45,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>×</button>
-        
+
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>🕉️</div>
           <h2 className="playfair" style={{ color: '#2d4a22', fontSize: '1.8rem' }}>
@@ -54,13 +54,15 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
         </div>
 
         <div className="auth-tabs">
-          <button 
+          <button
+          style={{ padding: 13 }}
             className={`auth-tab ${activeTab === 'login' ? 'active' : ''}`}
             onClick={() => setActiveTab('login')}
           >
             Login
           </button>
-          <button 
+          <button
+          style={{ padding: 13 }}
             className={`auth-tab ${activeTab === 'signup' ? 'active' : ''}`}
             onClick={() => setActiveTab('signup')}
           >
@@ -72,12 +74,14 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           <div className="role-selector">
             <button
               type="button"
+              style={{ padding: 13 }}
               className={`role-option ${selectedRole === 'patient' ? 'selected' : ''}`}
               onClick={() => setSelectedRole('patient')}
             >
               🧘‍♀️ Patient
             </button>
             <button
+            style={{ padding: 13 }}
               type="button"
               className={`role-option ${selectedRole === 'therapist' ? 'selected' : ''}`}
               onClick={() => setSelectedRole('therapist')}
@@ -90,6 +94,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group">
               <label>Full Name</label>
               <input
+              style={{ padding: 10 }}
                 type="text"
                 name="name"
                 value={formData.name}
@@ -100,9 +105,10 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             </div>
           )}
 
-          <div className="form-group">
+          <div className="form-group" >
             <label>Email Address</label>
             <input
+              style={{ padding: 10 }}
               type="email"
               name="email"
               value={formData.email}
@@ -116,6 +122,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group">
               <label>Phone Number</label>
               <input
+              style={{ padding: 10 }}
                 type="tel"
                 name="phone"
                 value={formData.phone}
@@ -129,6 +136,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           <div className="form-group password-field">
             <label>Password</label>
             <input
+            style={{ padding: 10 }}
               type={showPassword ? 'text' : 'password'}
               name="password"
               value={formData.password}
@@ -137,6 +145,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
               required
             />
             <button
+            style={{ padding: 10 }}
               type="button"
               className="password-toggle"
               onClick={() => setShowPassword(!showPassword)}
@@ -149,6 +158,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
             <div className="form-group password-field">
               <label>Confirm Password</label>
               <input
+              style={{ padding: 10 }}
                 type={showPassword ? 'text' : 'password'}
                 name="confirmPassword"
                 value={formData.confirmPassword}
@@ -175,8 +185,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           {activeTab === 'login' ? (
             <p>
               Don't have an account?{' '}
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setActiveTab('signup')}
                 style={{ background: 'none', border: 'none', color: '#daa520', cursor: 'pointer', textDecoration: 'underline' }}
               >
@@ -186,8 +196,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }) => {
           ) : (
             <p>
               Already have an account?{' '}
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setActiveTab('login')}
                 style={{ background: 'none', border: 'none', color: '#daa520', cursor: 'pointer', textDecoration: 'underline' }}
               >

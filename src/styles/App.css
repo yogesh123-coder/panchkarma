@@ -877,8 +877,9 @@ body {
 
 .password-toggle {
   position: absolute;
-  right: 15px;
-  top: 50%;
+
+  right: 15px;  
+  top: 68%;
   transform: translateY(-50%);
   background: none;
   border: none;

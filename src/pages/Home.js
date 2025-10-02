@@ -10,7 +10,7 @@ const Home = ({ user, onAuthClick, onLogout }) => {
       </div>
 
       <main className="hero">
-        <div className="hero-content">
+        <div className="hero-content" style={{marginTop:"4rem"}}>
           <div style={{ fontSize: '4rem', marginBottom: '1rem' }} className="animate-float">🕉️</div>
           <h2 className="playfair">🌿 Panchakarma Patient Management System 🌿</h2>
           <p>Comprehensive therapy scheduling, progress tracking, and AI-powered assistance for traditional Ayurvedic treatments</p>
